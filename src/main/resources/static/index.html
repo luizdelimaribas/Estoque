@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Produtos</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Tela de Cadastro -->
+  <div id="cadastro">
+    <h2>Cadastrar Produto</h2>
+    <label>Nome: <input type="text" id="nome"></label>
+    <label>Valor: <input type="number" id="valor"></label>
+    <label>Quantidade: <input type="number" id="quantidade"></label>
+    <div class="actions">
+      <button onclick="salvarProduto()">Salvar</button>
+      <button onclick="mostrarLista()">Ver Lista</button>
+    </div>
+    <p id="mensagem"></p>
+  </div>
+
+  <!-- Tela de Listagem -->
+  <div id="lista" class="hidden">
+    <h2>Lista de Produtos</h2>
+    <label>Filtro: 
+      <input type="text" id="filtro" placeholder="Digite ID ou Nome">
+      <button onclick="filtrar()">Filtrar</button>
+    </label>
+    <table id="tabela">
+      <thead>
+        <tr>
+          <th>ID</th><th>Nome</th><th>Valor</th><th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="actions">
+      <button onclick="mostrarCadastro()">Voltar</button>
+    </div>
+  </div>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
